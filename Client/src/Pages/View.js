@@ -8,7 +8,7 @@ const View = () => {
     const{id}=useParams();
 
     useEffect(()=>{
-         debugger;
+         
         axios.get(`http://localhost:5000/get/${id}`).then((res)=>{
             setUser({...res.data.data[0]});
             console.log("Name =>", res.data.data[0].contact );

@@ -1,0 +1,24 @@
+# Client dependencies
+/Client/node_modules
+/Client/.pnp
+/Client/.pnp.js
+
+# Client testing
+/Client/coverage
+
+# Client production
+/Client/build
+
+# Client misc
+/Client/.DS_Store
+/Client/.env.local
+/Client/.env.development.local
+/Client/.env.test.local
+/Client/.env.production.local
+
+/Client/npm-debug.log*
+/Client/yarn-debug.log*
+/Client/yarn-error.log*
+
+# Server dependencies
+/Server/node_modules

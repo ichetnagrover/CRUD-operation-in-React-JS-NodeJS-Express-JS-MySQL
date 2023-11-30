@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const cors = require("cors");
 
+
+//MySQL Connection
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
@@ -26,6 +28,7 @@ app.get("/get", (req, res) => {
     });
 });
 
+//Create new task
 app.post('/insert', (req, res) => {
     const { name, email, contact } = req.body;
     const checkDuplicate = `SELECT * FROM contact_db WHERE email=?`;
@@ -98,6 +101,7 @@ app.put("/update/:id", (req, res) => {
 });
 
 
+//this will get all task
 app.get("/api/get/:id", (req, res) => {
     const {id} =req.params;
     const sqlGet = "SELECT * FROM contact_db Where id=?";
@@ -110,7 +114,7 @@ app.get("/api/get/:id", (req, res) => {
     });
 });
 
-
+//this will update task
 app.put("/api/update/:id", (req, res) => {
     const {id} =req.params;
     const {name, email, contact} =req.body;
@@ -124,6 +128,8 @@ app.put("/api/update/:id", (req, res) => {
     });
 });
 
+
+//Start the Server
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

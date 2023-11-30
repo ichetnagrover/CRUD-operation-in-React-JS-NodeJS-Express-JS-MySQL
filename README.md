@@ -1,5 +1,7 @@
 # CRUD Operations in React, Node.js, Express, and MySQL
 
+[![UI Screenshot](./Client/public/Dashboard.png)](http://localhost:3000)
+
 This project showcases a CRUD (Create, Read, Update, Delete) operation implementation using React JS, Node.js, Express JS, and MySQL. It manages multiple records and provides functionalities to Create, Read, Update, and Delete records.
 
 ## Functionality
